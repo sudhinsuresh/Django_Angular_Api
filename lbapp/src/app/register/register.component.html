@@ -1,0 +1,19 @@
+
+<h4 class="text-center">Register</h4>
+<div class="container">
+    <form #form="ngForm" (ngSubmit)="onsubmit()" >
+      <div class="form-group mb-3">
+        <label for="name">Username</label>
+        <input type="text" class="form-control" required id="username" name="username" #username="ngModel" [(ngModel)]="data.username" required>
+      </div>
+      <div class="form-group mb-3">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" required id="password" name="password" #password="ngModel" [(ngModel)]="data.password" required>
+      </div>
+      
+
+      <div class="mb-3">
+        <input type="submit" class="form-control">
+      </div>
+    </form>
+  </div>

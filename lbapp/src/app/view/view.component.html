@@ -1,0 +1,19 @@
+<h5 class="text-center">Bookview</h5>
+<table class="table table-bordered m-5">
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>Author</th>
+        <th>Price</th>
+        
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.auther }}</td>
+        <td>{{ item.price }}</td>
+        <td><button (click)="details(item.id)" class="btn btn-success">View</button></td>
+        <td><button (click)="edit(item.id)" class="btn btn-success">Edit</button></td>
+        <td><button (click)="delete(item.id)" type="button" class="btn btn-success">Delete</button></td>
+    </tr>
+</table>

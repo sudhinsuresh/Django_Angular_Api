@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div *ngIf="isAuthenticated==true">
+            <div class="col-12 col-md-6 text-center">
+                <button class="btn btn-dark m-3" style="height: 30px; width: 200px;" [routerLink]="['/viewbooks']">View Books</button>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <button class="btn btn-dark m-3" style="height: 30px; width: 200px;" routerLink="addbooks">Add Books</button>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <button (click)="logout()" class="btn btn-dark m-3" style="height: 30px; width: 200px;" routerLink="login">Logout</button>
+            </div>
+        </div>
+        <div *ngIf="isAuthenticated==false">
+            <div class="col-12 col-md-6 text-center">
+                <button class="btn btn-dark m-3" style="height: 30px; width: 200px;" routerLink="register">Register</button>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <button class="btn btn-dark m-3" style="height: 30px; width: 200px;" routerLink="login">Login</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
